@@ -72,7 +72,7 @@ Progress/Tasks completed:
 \newline Divisibility and greatest common divisors: The Euclidean Algorithm was interesting. I was not familiar with it before unlike the other content of the section. I don't yet see how GCDs are directly relevant to Cryptography, but it was a fun read. Also, I learnt the concept of "relatively prime".
 \newline Modular arithmetic: "\mathbb{Z}/m\mathbb{Z} is the ring of integers modulo m". I recognise this notation and now know what it means! I was introduced to Euler’s phi function and The fast powering algorithm in addition to that.
 \newline Prime numbers, unique factorization,
-and finite fields: The Fundamental Theorem of Arithmetic was something I used to simplify surds but did not know of formally. Came across a written definition of a field. Learnt that that hollow F is used to represent fields, along with a value; that is equivalent to "\mathbb{Z}/p\mathbb{Z}, and that the equality relationship between two elements belonging to each is different.  
+and finite fields: The Fundamental Theorem of Arithmetic was something I used to simplify surds but did not know of formally. Came across a written definition of a field. Learnt that that hollow F is used to represent fields, along with a value. 
 \item 06/10/13 With the aid of online resources, created LaTeX bibliography. 
 \item 07/10/13 Symmetric and asymmetric ciphers:
 \newline Elliptic curves:
@@ -85,7 +85,7 @@ and finite fields: The Fundamental Theorem of Arithmetic was something I used to
 \section*{Week 3}
 Learning goals:
 \begin{itemize}
-\item Digital Signatures (DSA)
+\item Digital Signatures
 \item Side Channel Attacks (analysis, countermeasures).
 \end{itemize}
 
