@@ -279,17 +279,17 @@ introduced to vi,
 
 \newpage
 \section*{Week 6*}
-Learning goals:
+\textbf{Learning goals:}
 \begin{itemize}
 \item
 \end{itemize}
 
-Reading list:
+\textbf{Reading list:}
 \begin{itemize}
 \item 
 \end{itemize}
 
-Progress/Tasks completed:
+\textbf{Progress/Tasks completed:}
 
 06/01/14
 \begin{itemize}
@@ -304,74 +304,93 @@ Progress/Tasks completed:
 
 09/01/14
 \begin{itemize}
-\item mean (counter, then array+research), sd... 0's for sd. Think it's because decimal numbers are being cut off with unsigned long.
+\item I created a program to find the mean. (I didn't want to start working with the ec2\_mult.c file because I wouldn't know if the code I wrote was working.) I used a sum variable to add all the values up, and a counter which added one to itself every time a number was added to the sum, and divided the sum by the counter to find the mean. I used some numbers I randomly picked, and the mean result I got was correct (but rounded down)
+\item My previous method did not help with finding the standard deviation, so I decided to use vectors. I wrote some code the way I would in C++, only to realise I could not use vectors in C. Instead, I referred to my Programming in C book, and to some websites, and used arrays instead.
+\item I created a very large array to store the values in, and a counter that increased as a value was added to the array. To find the mean, a for loop was used and went up to the counter (i.e. how many elements were added to the array) to prevent it from including the rest of the array. Similar to the other method, these numbers were added together and divided by the counter. I used a few numbers, and the mean was correct.
+\item Using the same idea, I created another program, that found the standard deviation. I also needed the mean for this. My first problem with this was that I couldn't compile. I Googled it, and it turned out that I needed to use the \textbf{-lm} arg because I had included math (I had to use math so that I could use squareroot).
+\item Another problem I encountered was that I wasn't getting the standard deviation value I was supposed to. I was getting 0's and couldn't work out why. I thought it was because decimal numbers were being cut off with my \textbf{unsigned long}s. 
 \end{itemize}
 
 10/01/14
 \begin{itemize}
-\item Asked if I should run tests on all curves. A: not prime ones. Made a list from ecparam -list\_curves. \item Started creating keys (I think). Can't run tests on all.
+\item I asked if I should run tests on all curves. The answer I received was on all but prime curves. So I made a list from ecparam -list\_curves. 
+\item Started creating keys (I think). Can't run tests on all...
+\end{itemize}
+
+
+11/01/14
+\begin{itemize}
+\item I added parts of my mean and standard deviation programs to ec2\_mult.c. I got the same maths error I did with my SD program while building OpenSSL, and decided that I needed to add the \textbf{-lm} argument somewhere. Adding it to \textbf{make} didn't work, but adding it to \textbf{./config} did.
+\item I knew it was more efficient for me to use functions. I tried creating them in my tester programs, but I couldn't get it to work.
 \end{itemize}
 
 12/01/14
 \begin{itemize}
-\item "unsigned long array[]" problem while trying to use functions... Took forever. 
+\item I finally solved my problem with functions. I needed to specifically define the array argument "unsigned long array[]", which I saw on a C++ forum, and the other arguments too. It felt like it took forever to figure that out. 
+\item I made changes to ec2\_mult.c so that I could use the functions I created.
+\item I still got zeros for my standard deviation.
 \end{itemize}
 
 
 \newpage
 \section*{Week 7*}
-Learning goals:
+\textbf{Learning goals:}
 \begin{itemize}
 \item 
 \end{itemize}
 
-Reading list:
+\textbf{Reading list:}
 \begin{itemize}
 \item 
 \end{itemize}
 
-Progress/Tasks completed:
+\textbf{Progress/Tasks completed:}
 
 13/01/14
 \begin{itemize}
-\item Yuval fixed my SD problem. 
+\item I showed my progress to Yuval, who fixed my problem with the standard deviations where I was getting zeros. I also shared the fact that we couldn't run tests on all the curves.
 \end{itemize}
 
 15/01/14
 \begin{itemize}
-\item Read error...
+\item I booted the laptop I use to run tests on Windows. It froze. When I tried to reboot, I got a \textbf{read error}... I tried reformatting, but couldn't. I think there might be a problem with the hard disk drive.
 \end{itemize}
 
-16-17/01/14
+16-18/01/14
 \begin{itemize}
-\item Boot, drive wipe, recovery (Recuva)...
+\item Previously, I had installed Ubuntu on my deskptop, but couldn't boot into it. I had just left it because I had it working on the laptop. I know Ubuntu was installed because I partitioned my second HDD, and half of its space disappeared on Windows. 
+\item I had a feeling the reason I couldn't boot into it was because it was installed onto a drive my Windows wasn't installed on. I couldn't get it to work by trying to change boot drives, and installing a program that adds boot options. While trying and failing at the latter, I managed to acidentally remove my option to boot into Windows also. 
+\item This lead to me trying to "repair" windows with a Windows installation disc. It brought back my Windows boot, but wiped my second drive. 
+\item I downloaded a Disc Recovery tool (Recuva) and run a scan (that took many, many hours) to try and recover my lost files. I recovered everything I needed that came up and wasn't already backed up. (There wasn't anything I could think of that wasn't recovered.) From what I recovered and tested, some of the PDF files I had did not work.
+\item I backed up what I recovered, and some files on my drive that wasn't wiped. I then tried installing Ubuntu in various ways, such as advanced partitioning options and installing on the drive Windows was on. I didn't really get anywhere! :(
 \end{itemize}
 
 18/01/14
 \begin{itemize}
-\item Used try Ubuntu to connect to server and ran tests and saved results by using its terminal. Created more keys/certs
+\item I used \textbf{Try Ubuntu}'s terminal to connect to GDI and ran my server and client via that to obtain and save the results.
 \end{itemize}
 
 19/01/14
 \begin{itemize}
-\item Found arg to make the curves I couldn't run tests on work. Put data into a LaTeX table. Learned some LaTeX syntax/formatting for that.
+\item After a Google search, I found an argument to add to the s\_client command that resolved the problem of all the curves not giving test results. The argument is \textbf{-no\_tls1} and turns off TLS (which I believe is "Transport Layer Security").
+\item I put the data into a LaTeX table and learned some LaTeX syntax/formatting for that.
 \end{itemize}
 
 
 
 \newpage
 \section*{Week 8*}
-Learning goals:
+\textbf{Learning goals:}
 \begin{itemize}
 \item 
 \end{itemize}
 
-Reading list:
+\textbf{Reading list:}
 \begin{itemize}
 \item 
 \end{itemize}
 
-Progress/Tasks completed:
+\textbf{Progress/Tasks completed:}
 
 21/01/14
 \begin{itemize}
@@ -393,21 +412,42 @@ Progress/Tasks completed:
 
 \newpage
 \section*{Week 9*}
-Learning goals:
+\textbf{Learning goals:}
 \begin{itemize}
 \item 
 \end{itemize}
 
-Reading list:
+\textbf{Reading list:}
 \begin{itemize}
 \item 
 \end{itemize}
 
-Progress/Tasks completed:
+\textbf{Progress/Tasks completed:}
 
 27/01/14
 \begin{itemize}
+\item spy
+\end{itemize}
+
+
+
+\newpage
+\section*{Week 10*}
+\textbf{Learning goals:}
+\begin{itemize}
 \item 
+\end{itemize}
+
+\textbf{Reading list:}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\textbf{Progress/Tasks completed:}
+
+0/02/14
+\begin{itemize}
+\item Config x3...
 \end{itemize}
 
 
